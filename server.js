@@ -76,7 +76,7 @@ function createTemplate (data){
 }
 
 app.get('/:mem', function (req, res) {
-    var familyMem = req.params.mem;
+    var familyMem = req.params.mem.toUpperCase();
   res.send(createTemplate(familyDetails[familyMem]));
 });
 
