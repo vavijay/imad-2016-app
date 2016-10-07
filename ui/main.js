@@ -3,7 +3,7 @@ console.log('Loaded!');
 //Counter increment by button
 var objbutton = document.getElementById('btncounter');
 
-button.onclick = function () {
+objbutton.onclick = function () {
     // create a request object
     var request = new XMLHttpRequest();
     
