@@ -13,14 +13,14 @@ objbutton.onclick = function () {
         updspan.innerHTML = "State Changed";
         if (request.readyState === XMLHttpRequest.DONE){
             updspan.innerHTML = "Request Done";
-            if (request.status === 200){
+            //if (request.status === 200){
                 var currcounter = request.responseText();
                
                 updspan.innerHTML = currcounter.toString();
-            }
-            else{
-                 updspan.innerHTML = "-1";
-            }
+            //}
+            //else{
+            //     updspan.innerHTML = "-1";
+            //}
             
         }
     };
