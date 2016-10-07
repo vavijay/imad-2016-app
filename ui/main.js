@@ -9,7 +9,7 @@ button.onclick = function () {
     
     // capture the response and store in a variable
     request.onreadystatechange = function(){
-        if (request.readyState === XMLHttpRequest.Done){
+        if (request.readyState === XMLHttpRequest.DONE){
             if (request.status === 200){
                 var currcounter = request.responseText();
                 var updspan = document.getElementById('spancount');
