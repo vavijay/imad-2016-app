@@ -10,10 +10,14 @@ objbutton.onclick = function () {
     // capture the response and store in a variable
     request.onreadystatechange = function(){
         if (request.readyState === XMLHttpRequest.DONE){
+            var updspan = document.getElementById('spancount');
             if (request.status === 200){
                 var currcounter = request.responseText();
-                var updspan = document.getElementById('spancount');
+               
                 updspan.innerHTML = currcounter.toString();
+            }
+            else{
+                 updspan.innerHTML = "-1";
             }
             
         }
