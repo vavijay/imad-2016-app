@@ -75,11 +75,14 @@ function createTemplate (data){
     return htmlTemplate;
 }
 
+app.get('/MyArticle', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'myArticle.html'));
+});
+
 app.get('/:mem', function (req, res) {
     var familyMem = req.params.mem.toUpperCase();
   res.send(createTemplate(familyDetails[familyMem]));
 });
-
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -87,10 +90,6 @@ app.get('/', function (req, res) {
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
-
-app.get('/MyArticle', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'myArticle.html'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
