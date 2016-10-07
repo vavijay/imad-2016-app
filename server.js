@@ -77,7 +77,7 @@ function createTemplate (data){
 
 app.get('/:mem', function (req, res) {
     var familyMem = req.params.mem;
-  res.send(createTemplate(familyDetails[familMem]));
+  res.send(createTemplate(familyDetails[familyMem]));
 });
 
 
