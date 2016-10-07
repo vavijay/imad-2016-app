@@ -1,5 +1,3 @@
-console.log('Loaded!');
-
 //Counter increment by button
 var objbutton = document.getElementById('btncounter');
 var updspan = document.getElementById('spancount');
