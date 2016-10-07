@@ -19,7 +19,7 @@ function createTemplate (data){
     var age = data.age;
     var content = data.content;
     
-    var htmlTemplate = {
+    var htmlTemplate =
         `<html>
             <head>
                 <title>
@@ -49,9 +49,9 @@ function createTemplate (data){
             </body>
     
         </html>`
-    };
+    ;
     return htmlTemplate;
-};
+}
 
 app.get('/aboutWife', function (req, res) {
   res.send(createTemplate(familyDetails));
