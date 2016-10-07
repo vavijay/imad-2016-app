@@ -20,3 +20,15 @@ body {
     height: 200px;
 }
 
+.docstyle{
+    max-width: 800px;
+}
+.contentStyle {
+    margin: 0 auto;
+    color: #00BCD4;
+    padding: 30;
+    font-family: sans-serif;
+}
+.topicstyle {
+    color: blue;
+}
