@@ -10,7 +10,7 @@ objbutton.onclick = function () {
     //updspan.innerHTML = "Request created";
     // capture the response and store in a variable
     request.onreadystatechange = function(){
-        updspan.innerHTML = "State Changed";
+        //updspan.innerHTML = "State Changed";
         if (request.readyState === XMLHttpRequest.DONE){
             //updspan.innerHTML = "Request Done";
             //if (request.status === 200){
