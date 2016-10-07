@@ -33,7 +33,7 @@ var familyDetails = {
     age: '46',
     content: `<p> It is me. </p>
     <p> I loves to be lazy </p>`
-    },
+    }
 };
 
 function createTemplate (data){
