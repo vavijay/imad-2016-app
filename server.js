@@ -73,6 +73,7 @@ function createTemplate (data){
                         This button <button id="btncounter">Increase Count</button> will increase visit count. The current count is <span id = "spancount">0</span>.
                     </div>
                 </div>
+                <script type="text/javascript" src="/ui/main.js"></script>
             </body>
     
         </html>`;
