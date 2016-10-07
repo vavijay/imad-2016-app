@@ -8,23 +8,22 @@ app.use(morgan('combined'));
 var familyDetails = {
     title: 'My Wife | VAV family',
     heading: 'About My Wife',
-    age: '39'
+    age: '39',
     content: `<p> She is my wife. </p>
     <p> She loves sleeping </p>`
-    
 };
 
 function createTemplate (data){
-    var title = data.title
-    var heading = data.heading
-    var age = data.age
-    var content = data.content
+    var title = data.title;
+    var heading = data.heading;
+    var age = data.age;
+    var content = data.content;
     
     var htmlTemplate = {
         `<html>
             <head>
                 <title>
-                    ${title}
+                    ${title};
                 </title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link href="/ui/style.css" rel="stylesheet" />
@@ -36,7 +35,7 @@ function createTemplate (data){
                 </div>
                 <hr>
                 <h3 class="topicstyle">
-                    ${heading}
+                    ${heading};
                 </h3>
                 <hr>
                 <div>
@@ -44,7 +43,7 @@ function createTemplate (data){
                 </div>
                 <hr>
                 <div class="contentStyle">
-                    ${content}
+                    ${content};
                 </div>
                 </div>
             </body>
@@ -52,7 +51,7 @@ function createTemplate (data){
         </html>`
     };
     return htmlTemplate;
-}
+};
 
 app.get('/aboutWife', function (req, res) {
   res.send(createTemplate(familyDetails));
