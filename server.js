@@ -6,28 +6,28 @@ var app = express();
 app.use(morgan('combined'));
 
 var familyDetails = {
-    wifeDetails: {
+    WIFEDETAILS: {
     title: 'My Wife | VAV family',
     heading: 'About My Wife',
     age: '39',
     content: `<p> She is my wife. </p>
     <p> She loves sleeping </p>`
     },
-    sonDetails: {
+    SONDETAILS: {
     title: 'My Son | VAV family',
     heading: 'About My Son',
     age: '16',
     content: `<p> He is my Son. </p>
     <p> He loves playing </p>`
     },
-    daughterDetails: {
+    DAUGHTERDETAILS: {
     title: 'My Daughter | VAV family',
     heading: 'About My Daughter',
     age: '18',
     content: `<p> She is my daughter. </p>
     <p> She loves studing and sleeping </p>`
     },
-    myDetails: {
+    MYDETAILS: {
     title: 'Myself | VAV family',
     heading: 'About me',
     age: '46',
