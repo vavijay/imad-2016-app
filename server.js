@@ -53,27 +53,37 @@ function createTemplate (data){
             </head>
             <body>
                 <div class="docstyle"> 
-                <div >
-                    <a href="/">My Home</a>
-                </div>
-                <hr>
-                <h3 class="topicstyle">
-                    ${heading}
-                </h3>
-                <hr>
-                <div>
-                    <i>Age: ${age}</i>
-                </div>
-                <hr>
-                <div class="contentStyle">
-                    ${content}
-                </div>
+                    <div >
+                        <a href="/">My Home</a>
+                    </div>
+                    <hr>
+                    <h3 class="topicstyle">
+                        ${heading}
+                    </h3>
+                    <hr>
+                    <div>
+                        <i>Age: ${age}</i>
+                    </div>
+                    <hr>
+                    <div class="contentStyle">
+                        ${content}
+                    </div>
+                    <hr>
+                    <div>
+                        This button <button id="btncounter">Increase Count</button> will increase visit count. The current count is <span id = "spancount">0</span>.
+                    </div>
                 </div>
             </body>
     
-        </html>`
+        </html>`;
     return htmlTemplate;
 }
+
+var myCounter = 0;
+app.get('/counter', function (req, res) {
+    myCounter = myCounter + 1;
+    res.send(myCounter.toString());
+});
 
 app.get('/MyArticle', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'myArticle.html'));
