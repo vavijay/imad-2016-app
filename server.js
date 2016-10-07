@@ -6,11 +6,34 @@ var app = express();
 app.use(morgan('combined'));
 
 var familyDetails = {
+    wifeDetails: {
     title: 'My Wife | VAV family',
     heading: 'About My Wife',
     age: '39',
     content: `<p> She is my wife. </p>
     <p> She loves sleeping </p>`
+    },
+    sonDetails: {
+    title: 'My Son | VAV family',
+    heading: 'About My Son',
+    age: '16',
+    content: `<p> He is my Son. </p>
+    <p> He loves playing </p>`
+    },
+    daughterDetails: {
+    title: 'My Daughter | VAV family',
+    heading: 'About My Daughter',
+    age: '18',
+    content: `<p> She is my daughter. </p>
+    <p> She loves studing and sleeping </p>`
+    },
+    myDetails: {
+    title: 'Myself | VAV family',
+    heading: 'About me',
+    age: '46',
+    content: `<p> It is me. </p>
+    <p> I loves to be lazy </p>`
+    },
 };
 
 function createTemplate (data){
@@ -52,8 +75,9 @@ function createTemplate (data){
     return htmlTemplate;
 }
 
-app.get('/aboutWife', function (req, res) {
-  res.send(createTemplate(familyDetails));
+app.get('/:mem', function (req, res) {
+    var familyMem = req.params.mem;
+  res.send(createTemplate(familyDetails[familMem]));
 });
 
 
