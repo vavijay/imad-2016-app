@@ -12,7 +12,7 @@ objbutton.onclick = function () {
     request.onreadystatechange = function(){
         updspan.innerHTML = "State Changed";
         if (request.readyState === XMLHttpRequest.DONE){
-            
+            updspan.innerHTML = "Request Done";
             if (request.status === 200){
                 var currcounter = request.responseText();
                
